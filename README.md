@@ -1,2 +1,2 @@
-boilerplate
+Responsive Boilerplate
 ===========
