@@ -3,7 +3,7 @@
 /*---------------------------------------------------------------------------------------- */
 
 @import url('normalize.min.css');
-@import url('less-styles.css');
+@import url('less-styles.less');
 
 /*
 /*	HTML
@@ -36,7 +36,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid lighten(@base-dark, 20%);
   margin: 1em 0;
   padding: 0;
 }
@@ -132,22 +132,23 @@ textarea {
 /*---------------------------------------------------------------------------------------- */
 
 .header-container {
-  border-bottom: 20px solid #e44d26;
+  border-bottom: 20px solid darken(@base-dark, 10%);
+  overflow: hidden;
 }
 
 .footer-container,
 .main aside {
-  border-top: 20px solid #e44d26;
+  border-top: 20px solid darken(@base-dark, 10%);
 }
 
 .header-container,
 .footer-container,
 .main aside {
-  background: #f16529;
+  background: @base-dark;
 }
 
 .title {
-  color: white;
+  color: @base-light;
 }
 
 /*
@@ -168,8 +169,8 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 
-  color: white;
-  background: #e44d26;
+  color: @base-light;
+  background: darken(@base-dark, 10%);
 }
 
 nav a:hover,
@@ -194,12 +195,12 @@ nav a:hover {
 }
 
 .main aside {
-  color: white;
+  color: @base-light;
   padding: 0px 5% 10px;
 }
 
 .footer-container footer {
-  color: white;
+  color: @base-light;
   padding: 20px 0;
 }
 
