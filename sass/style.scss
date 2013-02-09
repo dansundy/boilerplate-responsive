@@ -2,20 +2,12 @@
 /*	@imports
 /*---------------------------------------------------------------------------------------- */
 
-@import "normalize.min.css";
+@import "normalize.scss";
 @import "_base.scss";
 
 /*
 /*	HTML
 /*---------------------------------------------------------------------------------------- */
-
-html,
-button,
-input,
-select,
-textarea {
-  color: #222;
-}
 
 body {
   font-size: 1em;
@@ -32,17 +24,9 @@ body {
   text-shadow: none;
 }
 
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid $base-dark;
-  margin: 1em 0;
-  padding: 0;
-}
-
 img {
   vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
 }
 
 fieldset {
@@ -62,27 +46,14 @@ textarea {
   padding: 0.2em 0;
 }
 
-.wrapper {
-  width: 90%;
-  margin: 0 5%;
-}
-
 /*
 /*	Classes
 /*---------------------------------------------------------------------------------------- */
 
 .ir {
-  background-color: transparent;
-  border: 0;
+  text-indent: 100%;
+  white-space: nowrap;
   overflow: hidden;
-  *text-indent: -9999px;
-}
-
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 100%;
 }
 
 .none {
@@ -125,48 +96,46 @@ textarea {
     clear: both;
 }
 
-/* For IE 6/7 only */
-.cf {
-    *zoom: 1;
-}
-
-
 /*
-/*	IE Fixes
+/*  GENERAL
 /*---------------------------------------------------------------------------------------- */
 
-
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+}
 
 /*
 /*	Media Queries
 /*---------------------------------------------------------------------------------------- */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 34.375em) {
 
 /*
-/*	INTERMEDIATE
+/*  MOBILE
 /*---------------------------------------------------------------------------------------- */
 
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 34.375em) {
 
 /*
-/*	WIDE
+/*	TABLET
 /*---------------------------------------------------------------------------------------- */
 
 
 }
 
-@media only screen and (min-width: 1140px) {
+
+@media only screen and (min-width: 60em) {
 
 /*
-/*	FULL SIZE
+/*	DESKTOP
 /*---------------------------------------------------------------------------------------- */
 
   .wrapper {
-    width: 1026px; /* 1140px - 10% for margins */
+    max-width: 1026px; /* 1140px - 10% for margins */
     margin: 0 auto;
   }
 
