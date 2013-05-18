@@ -1,0 +1,3 @@
+[submodule "sass/standardize"]
+	path = sass/standardize
+	url = git@github.com:dansundy/standardize.git
